@@ -5,10 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var nuevoDiv = document.createElement('div');
     var nuevoDiv1 = document.createElement('div');
     var divTextoInicio = document.createElement('div');
-    var botonEmpieza = document.createElement('buttom');
+    var botonEmpieza = document.createElement('button');
     var imgDuoInicio = document.createElement('img');
     var barraIdiomas = document.createElement('div');
-    var botonCuenta = document.createElement('buttom');
+    var botonCuenta = document.createElement('button');
+    var textoDivertido = document.createElement('div');
     
     //-------------------------Propiedades de todo-------------------------\\
 
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     barraBlanca.style.backgroundColor = '#fff';
     barraBlanca.style.position = 'fixed';  
     barraBlanca.style.top = '0';
+    barraBlanca.style.boxShadow = '0px 0px 0px rgba(0, 0, 0, 1)';
 
     // Propiedades del div "nuevoDiv"
     nuevoDiv.textContent = 'APRENDE DIFERENTES IDIOMAS ▽';
@@ -29,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
     nuevoDiv.style.position = 'fixed';  
     nuevoDiv.style.top = '0';          
     nuevoDiv.style.right = '0';          
-    //nuevoDiv.style.transform = 'translateY(-50%)';
     nuevoDiv.style.display = 'inline-block';
     nuevoDiv.style.marginTop = '2%';
     nuevoDiv.style.marginRight = '11.5%';
@@ -79,13 +80,16 @@ document.addEventListener('DOMContentLoaded', function () {
     imgDuoInicio.style.position = 'static';
     
     //Propiedades de la barra de idiomas
-    barraIdiomas.textContent = 'Idiomas aca';
+    barraIdiomas.textContent = '';
     barraIdiomas.style.textAlign = 'center';
-    barraIdiomas.style.borderBlock = "2px solid #000";
+    barraIdiomas.style.borderBlock = "2px solid #9b9898";
     barraIdiomas.style.height = '100%';
     barraIdiomas.style.fontSize = '3vw';
     barraIdiomas.style.fontWeight = 'bold';
     barraIdiomas.style.fontFamily = 'Arial, sans-serif';
+    barraIdiomas.style.marginTop = '6%';
+    barraIdiomas.style.paddingTop = '7px';
+    barraIdiomas.style.paddingBottom = '15px';
 
     //Propiedades del boton empezar ahora
     botonEmpieza.textContent = 'EMPIEZA AHORA';
@@ -93,42 +97,46 @@ document.addEventListener('DOMContentLoaded', function () {
     botonEmpieza.style.cursor = 'pointer';
     botonEmpieza.style.fontWeight = 'bold';
     botonEmpieza.style.height = '100%';
-    botonEmpieza.style.scale = '80%';
-    botonEmpieza.style.borderRadius = '15px';
+    botonEmpieza.style.borderRadius = '12px';
     botonEmpieza.style.border = '2px solid #58cc02';
     botonEmpieza.style.fontFamily = 'Arial, sans-serif';
-    botonEmpieza.style.fontSize = '1.5vw';
+    botonEmpieza.style.fontSize = '1.2vw';
     botonEmpieza.style.backgroundColor = '#58cc02';
     botonEmpieza.style.color = '#fff';
-    botonEmpieza.style.display = 'block';
-    botonEmpieza.style.marginTop = '40px';
+    botonEmpieza.style.display = 'sticky';
+    botonEmpieza.style.marginTop = '20px';
     botonEmpieza.style.marginRight = '50px';
-    botonEmpieza.style.paddingTop = '20px';
-    botonEmpieza.style.paddingBottom = '20px';
-    botonEmpieza.style.paddingRight = '30px';
-    botonEmpieza.style.paddingLeft = '35px';
+    botonEmpieza.style.paddingTop = '10px';
+    botonEmpieza.style.paddingBottom = '10px';
+    botonEmpieza.style.paddingRight = '120px';
+    botonEmpieza.style.paddingLeft = '120px';
     botonEmpieza.style.boxShadow = '0px 6px 0px rgba(63, 145, 0, 1)'
     
+    //Propiedades del boton de cuenta
     botonCuenta.textContent = 'YA TENGO UNA CUENTA';
     botonCuenta.style.marginLeft = '8%';
     botonCuenta.style.cursor = 'pointer';
     botonCuenta.style.fontWeight = 'bold';
-    botonCuenta.style.height = '100%';
-    botonCuenta.style.scale = '80%';
-    botonCuenta.style.borderRadius = '15px';
+    //botonCuenta.style.height = '100%';
+    botonCuenta.style.borderRadius = '12px';
     botonCuenta.style.border = '3px solid #e2e2e2'
     botonCuenta.style.fontFamily = 'Arial, sans-serif';
-    botonCuenta.style.fontSize = '1.5vw';
+    botonCuenta.style.fontSize = '1.2vw';
     botonCuenta.style.backgroundColor = '#fff';
     botonCuenta.style.color = '#0077ff';
-    botonCuenta.style.display = 'block';
-    botonCuenta.style.marginTop = '5px';
+    botonCuenta.style.display = 'sticky';
+    botonCuenta.style.marginTop = '20px';
     botonCuenta.style.marginRight = '50px';
-    botonCuenta.style.paddingTop = '20px';
-    botonCuenta.style.paddingBottom = '20px';
-    botonCuenta.style.paddingRight = '30px';
-    botonCuenta.style.paddingLeft = '35px';
+    botonCuenta.style.paddingTop = '10px';
+    botonCuenta.style.paddingBottom = '10px';
+    botonCuenta.style.paddingRight = '95px';
+    botonCuenta.style.paddingLeft = '95px';
     botonCuenta.style.boxShadow = '0px 4px 0px rgba(226, 226, 226, 1)'
+
+    //Propiedades de el div textoDivertido
+    textoDivertido.textContent = 'divertido, efectivo y gratis';
+    textoDivertido.style.marginTop = '20%';
+    
 
     //-------------------------Opciones o funciones-------------------------\\
 
@@ -170,8 +178,10 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function() {
         if(window.pageYOffset > 0) {
             header.style.position = 'fixed';
+            barraBlanca.style.boxShadow = '0px 2px 0px rgba(226, 226, 226, 1)';
         } else {
             header.style.position = 'fixed';
+            barraBlanca.style.boxShadow = '0px 0px 0px rgba(0, 0, 0, 1)';
         }
     });
 
@@ -180,24 +190,39 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Empieza ahora ya');
     })
   
+    var idiomas = ['INGLES        ', 'FRANCES        ', 'ESPAÑOL        ', 'RUSO        ', 'ITALIANO    '];
+
+    // Crear opciones para cada idioma
+    idiomas.forEach(function(idioma, index) {
+        var opcionIdioma = document.createElement('span');
+        opcionIdioma.textContent = idioma;
+        opcionIdioma.style.cursor = 'pointer';
+        if (index < idiomas.length - 1) {
+            opcionIdioma.style.marginRight = '10px'; 
+        }
+        opcionIdioma.style.fontSize = '20px';
+        opcionIdioma.style.color = '#9b9898';
+        opcionIdioma.addEventListener('click', function() {
+            alert('Seleccionaste el idioma: ' + idioma);
+        });
+        barraIdiomas.appendChild(opcionIdioma);
+    });
+
+    // Agregar la barra de idiomas al cuerpo del documento
+    document.body.appendChild(barraIdiomas);
+
     //-------------------------Declaracion y anidacion de los diferentes elementos del DOM-------------------------\\
 
-
-    //Añadir los div's necesarios al header
+    header.appendChild(nuevoDiv);
+    header.appendChild(nuevoDiv1);
+    header.insertBefore(barraBlanca, header.firstChild);
     body.appendChild(header);
-
     body.appendChild(divTextoInicio);
     body.appendChild(imgDuoInicio);
     divTextoInicio.appendChild(botonEmpieza);
     divTextoInicio.appendChild(botonCuenta);
     body.appendChild(barraIdiomas);
-    
-    //Añade el nuevoDiv al cuerpo del documento
-    header.appendChild(nuevoDiv);
-    header.appendChild(nuevoDiv1);
-    header.insertBefore(barraBlanca, header.firstChild);
-
-    // Agregar el mini menú dentro del nuevoDiv
+    body.appendChild(textoDivertido);
     nuevoDiv.appendChild(menuIdiomas);
 
 });
