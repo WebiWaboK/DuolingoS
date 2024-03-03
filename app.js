@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var botonCuenta = document.createElement('button');
     var textoDivertido = document.createElement('div');
     var infoDivertido = document.createElement('div');
+    var imgSrTelefono = document.createElement('img');
     
     //-------------------------Propiedades de todo-------------------------\\
 
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     nuevoDiv.style.display = 'inline-block';
     nuevoDiv.style.marginTop = '2%';
     nuevoDiv.style.marginRight = '11.5%';
-    nuevoDiv.style.fontSize = '1vw';
+    nuevoDiv.style.fontSize = '1.2vw';
     nuevoDiv.style.fontWeight = 'bold';
     nuevoDiv.style.fontFamily = 'Arial, sans-serif';
     
@@ -148,6 +149,12 @@ document.addEventListener('DOMContentLoaded', function () {
     infoDivertido.style.fontSize = '1.2vw';
     infoDivertido.style.marginTop = '7%';
     infoDivertido.style.color = '#9b9898';
+    infoDivertido.style.lineHeight = '2vw'
+
+    //Propiedades imagen del telefono
+    imgSrTelefono.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//SrTelefono.PNG'
+    imgSrTelefono.style.marginLeft = '135%';
+    imgSrTelefono.style.marginTop = '-70%';
 
     //-------------------------Opciones o funciones-------------------------\\
 
@@ -236,5 +243,6 @@ document.addEventListener('DOMContentLoaded', function () {
     body.appendChild(textoDivertido);
     nuevoDiv.appendChild(menuIdiomas);
     textoDivertido.appendChild(infoDivertido);
+    textoDivertido.appendChild(imgSrTelefono);
 
 });
