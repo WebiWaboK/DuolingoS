@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var imgSrTelefono = document.createElement('img');
     var textoRespaldo = document.createElement('div');
     var infoRespaldo = document.createElement('div');
+    var imgRespaldo = document.createElement('img');
     
     //-------------------------Propiedades de todo-------------------------\\
 
@@ -174,6 +175,11 @@ document.addEventListener('DOMContentLoaded', function () {
     infoRespaldo.style.color = '#9b9898';
     infoRespaldo.style.lineHeight = '2vw';
 
+    //Propiedades de la imagen de respaldo
+    imgRespaldo.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//Respaldo.PNG';
+    imgRespaldo.style.marginLeft = '-120%';
+    imgRespaldo.style.marginTop = '-70%';
+
     //-------------------------Opciones o funciones-------------------------\\
 
     //menuIdiomas
@@ -264,5 +270,6 @@ document.addEventListener('DOMContentLoaded', function () {
     textoDivertido.appendChild(imgSrTelefono);
     body.appendChild(textoRespaldo);
     textoRespaldo.appendChild(infoRespaldo);
+    textoRespaldo.appendChild(imgRespaldo);
 
 });
