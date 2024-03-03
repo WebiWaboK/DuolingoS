@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var textoRespaldo = document.createElement('div');
     var infoRespaldo = document.createElement('div');
     var imgRespaldo = document.createElement('img');
+    var textoMotivacion = document.createElement('div');
+    var infoMotivacion = document.createElement('div');
+    var imgMotivacion = document.createElement('img');
     
     //-------------------------Propiedades de todo-------------------------\\
 
@@ -180,6 +183,27 @@ document.addEventListener('DOMContentLoaded', function () {
     imgRespaldo.style.marginLeft = '-120%';
     imgRespaldo.style.marginTop = '-70%';
 
+    //Propiedades de div Motivacion
+    textoMotivacion.textContent = 'mantén tu motivación';
+    textoMotivacion.style.marginTop = '20%';
+    textoMotivacion.style.marginLeft = '12%';
+    textoMotivacion.style.marginRight = '50%';
+    textoMotivacion.style.fontSize = '3.8vw';
+    textoMotivacion.style.fontWeight = 'bold';
+    textoMotivacion.style.color = '#58cc02';
+
+    //Propiedades infoMotivacion
+    infoMotivacion.textContent = 'Nuestras funcionalidades y desafíos son divertidos y hacen que aprender se sienta como un juego. ¡Vas a poder formar un hábito de aprendizaje sin esfuerzo! Y, por supuesto, recibirás recordatorios de nuestra adorable mascota, Duo, el búho.';
+    infoMotivacion.style.fontSize = '1.2vw';
+    infoMotivacion.style.marginTop = '7%';
+    infoMotivacion.style.color = '#9b9898';
+    infoMotivacion.style.lineHeight = '2vw';
+
+    //Propiedades imgMotivaciopn
+    imgMotivacion.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//Motivacion.PNG';
+    imgMotivacion.style.marginLeft = '135%';
+    imgMotivacion.style.marginTop = '-70%';
+
     //-------------------------Opciones o funciones-------------------------\\
 
     //menuIdiomas
@@ -271,5 +295,7 @@ document.addEventListener('DOMContentLoaded', function () {
     body.appendChild(textoRespaldo);
     textoRespaldo.appendChild(infoRespaldo);
     textoRespaldo.appendChild(imgRespaldo);
-
+    body.appendChild(textoMotivacion);
+    textoMotivacion.appendChild(infoMotivacion);
+    textoMotivacion.appendChild(imgMotivacion);
 });
