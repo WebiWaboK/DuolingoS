@@ -25,7 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var imgAprendizaje = document.createElement('img');
     var divSuperDuo = document.createElement('div');
     var imgSuperDuo = document.createElement('img');
-    var infoSuperDuo = document.createElement('div');    
+    var infoSuperDuo = document.createElement('img');   
+    var botonSuperDuo = document.createElement('button');
+    
+    
     //-------------------------Propiedades de todo-------------------------\\
 
     var barraBlanca = document.createElement('div');
@@ -239,6 +242,35 @@ document.addEventListener('DOMContentLoaded', function () {
     imgAprendizaje.style.marginLeft = '-120%';
     imgAprendizaje.style.marginTop = '-70%';
 
+    //Propiedades divSuperDuo
+    divSuperDuo.style.backgroundColor = '#100f3e'; // Cambiar el color a azul oscuro
+    divSuperDuo.style.marginTop = '9%';
+    divSuperDuo.style.marginLeft = '-1%';
+    divSuperDuo.style.width = '101.6%';
+    divSuperDuo.style.paddingTop = '20%';
+    divSuperDuo.style.paddingBottom = '20%';
+    divSuperDuo.style.display = 'flex'; // Utilizar display flex
+    divSuperDuo.style.alignItems = 'center'; // Alinear los elementos en el centro verticalmente
+
+
+    //Propiedades de la imgSuperDuo
+    imgSuperDuo.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//superDuo.PNG';
+    imgSuperDuo.style.marginLeft = '8%';
+    imgSuperDuo.style.marginTop = '-10%';
+
+    //Propiedades del titulo imagen
+    infoSuperDuo.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//superDuoTexto.PNG';
+    infoSuperDuo.style.position = 'static';
+    infoSuperDuo.marginTop = '10%';
+    infoSuperDuo.style.marginLeft = '60%';
+    infoSuperDuo.style.display = 'flex'; // Añadir propiedad display flex
+    infoSuperDuo.style.alignItems = 'center';
+    infoSuperDuo.style.justifyContent = 'center'; // Alinear en el eje y al centro
+
+    
+    //Propiedades boton super duo
+    var botonSuperDuo = document.createElement('button');
+
     //-------------------------Opciones o funciones-------------------------\\
 
     //menuIdiomas
@@ -337,4 +369,8 @@ document.addEventListener('DOMContentLoaded', function () {
     body.appendChild(textoAprendizaje);
     textoAprendizaje.appendChild(infoAprendizaje);
     textoAprendizaje.appendChild(imgAprendizaje);
+    body.appendChild(divSuperDuo);
+    divSuperDuo.appendChild(imgSuperDuo);
+    divSuperDuo.appendChild(infoSuperDuo);
+    //divSuperDuo.appendChild(botonSuperDuo);
 });
