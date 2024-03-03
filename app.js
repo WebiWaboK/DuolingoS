@@ -8,15 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var botonEmpieza = document.createElement('buttom');
     var imgDuoInicio = document.createElement('img');
     var barraIdiomas = document.createElement('div');
-    var br = document.createElement('br');
+    var botonCuenta = document.createElement('buttom');
     
     //-------------------------Propiedades de todo-------------------------\\
 
-    //Propiedades del header
-    //header.style.backgroundColor = '#fff';
-    //header.style.top = '0';
-    //header.style.marginTop = '1%';
- 
     var barraBlanca = document.createElement('div');
     barraBlanca.style.width = '100%';
     barraBlanca.style.height = '100px';
@@ -80,19 +75,19 @@ document.addEventListener('DOMContentLoaded', function () {
     //Propiedades de la imagen
     imgDuoInicio.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//duo.PNG';
     imgDuoInicio.style.marginLeft = '12%'
-    imgDuoInicio.style.marginTop = '-18%';
+    imgDuoInicio.style.marginTop = '-28%';
     imgDuoInicio.style.position = 'static';
     
     //Propiedades de la barra de idiomas
     barraIdiomas.textContent = 'Idiomas aca';
     barraIdiomas.style.textAlign = 'center';
     barraIdiomas.style.borderBlock = "2px solid #000";
-    barraIdiomas.style.marginTop = "10%"
     barraIdiomas.style.height = '100%';
     barraIdiomas.style.fontSize = '3vw';
     barraIdiomas.style.fontWeight = 'bold';
     barraIdiomas.style.fontFamily = 'Arial, sans-serif';
 
+    //Propiedades del boton empezar ahora
     botonEmpieza.textContent = 'EMPIEZA AHORA';
     botonEmpieza.style.marginLeft = '8%';
     botonEmpieza.style.cursor = 'pointer';
@@ -100,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
     botonEmpieza.style.height = '100%';
     botonEmpieza.style.scale = '80%';
     botonEmpieza.style.borderRadius = '15px';
+    botonEmpieza.style.border = '2px solid #58cc02';
     botonEmpieza.style.fontFamily = 'Arial, sans-serif';
     botonEmpieza.style.fontSize = '1.5vw';
     botonEmpieza.style.backgroundColor = '#58cc02';
@@ -111,8 +107,28 @@ document.addEventListener('DOMContentLoaded', function () {
     botonEmpieza.style.paddingBottom = '20px';
     botonEmpieza.style.paddingRight = '30px';
     botonEmpieza.style.paddingLeft = '35px';
-    botonEmpieza.style.boxShadow = '0px 6px 4px rgba(63, 145, 0, 1)'
+    botonEmpieza.style.boxShadow = '0px 6px 0px rgba(63, 145, 0, 1)'
     
+    botonCuenta.textContent = 'YA TENGO UNA CUENTA';
+    botonCuenta.style.marginLeft = '8%';
+    botonCuenta.style.cursor = 'pointer';
+    botonCuenta.style.fontWeight = 'bold';
+    botonCuenta.style.height = '100%';
+    botonCuenta.style.scale = '80%';
+    botonCuenta.style.borderRadius = '15px';
+    botonCuenta.style.border = '3px solid #e2e2e2'
+    botonCuenta.style.fontFamily = 'Arial, sans-serif';
+    botonCuenta.style.fontSize = '1.5vw';
+    botonCuenta.style.backgroundColor = '#fff';
+    botonCuenta.style.color = '#0077ff';
+    botonCuenta.style.display = 'block';
+    botonCuenta.style.marginTop = '5px';
+    botonCuenta.style.marginRight = '50px';
+    botonCuenta.style.paddingTop = '20px';
+    botonCuenta.style.paddingBottom = '20px';
+    botonCuenta.style.paddingRight = '30px';
+    botonCuenta.style.paddingLeft = '35px';
+    botonCuenta.style.boxShadow = '0px 4px 0px rgba(226, 226, 226, 1)'
 
     //-------------------------Opciones o funciones-------------------------\\
 
@@ -173,6 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
     body.appendChild(divTextoInicio);
     body.appendChild(imgDuoInicio);
     divTextoInicio.appendChild(botonEmpieza);
+    divTextoInicio.appendChild(botonCuenta);
     body.appendChild(barraIdiomas);
     
     //Añade el nuevoDiv al cuerpo del documento
