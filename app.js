@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var textoMotivacion = document.createElement('div');
     var infoMotivacion = document.createElement('div');
     var imgMotivacion = document.createElement('img');
+    var textoAprendizaje = document.createElement('div');
+    var infoAprendizaje = document.createElement('div');
+    var imgAprendizaje = document.createElement('img');
     
     //-------------------------Propiedades de todo-------------------------\\
 
@@ -204,6 +207,28 @@ document.addEventListener('DOMContentLoaded', function () {
     imgMotivacion.style.marginLeft = '135%';
     imgMotivacion.style.marginTop = '-70%';
 
+    //Propiedades de textoAprendizaje
+
+    textoAprendizaje.textContent = 'aprendizaje personalizado';
+    textoAprendizaje.style.fontSize = '3.8vw';
+    textoAprendizaje.style.fontWeight = 'bold';
+    textoAprendizaje.style.color = '#58cc02';
+    textoAprendizaje.style.marginTop = '15%';
+    textoAprendizaje.style.marginLeft = '50%';
+    textoAprendizaje.style.marginRight = '12%';
+
+    //Propiedades infoAprendizaje
+    infoAprendizaje.textContent = 'Al combinar lo mejor de la inteligencia artificial y las ciencias de idiomas, las lecciones se adaptan según tu desempeño para ayudarte a aprender al nivel adecuado y a tu propio ritmo.';
+    infoAprendizaje.style.fontSize = '1.2vw';
+    infoAprendizaje.style.marginTop = '7%';
+    infoAprendizaje.style.color = '#9b9898';
+    infoAprendizaje.style.lineHeight = '2vw';
+
+    //Propiedades de la imagen de Aprendizaje
+    imgAprendizaje.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//Aprendizaje.PNG';
+    imgAprendizaje.style.marginLeft = '-120%';
+    imgAprendizaje.style.marginTop = '-70%';
+
     //-------------------------Opciones o funciones-------------------------\\
 
     //menuIdiomas
@@ -298,4 +323,7 @@ document.addEventListener('DOMContentLoaded', function () {
     body.appendChild(textoMotivacion);
     textoMotivacion.appendChild(infoMotivacion);
     textoMotivacion.appendChild(imgMotivacion);
+    body.appendChild(textoAprendizaje);
+    textoAprendizaje.appendChild(infoAprendizaje);
+    textoAprendizaje.appendChild(imgAprendizaje);
 });
