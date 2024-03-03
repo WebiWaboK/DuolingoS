@@ -6,15 +6,16 @@ document.addEventListener('DOMContentLoaded', function () {
     var nuevoDiv1 = document.createElement('div');
     var divTextoInicio = document.createElement('div');
     var imgDuoInicio = document.createElement('img');
+    var barraIdiomas = document.createElement('div');
     
 
     //-------------------------Propiedades de todo-------------------------\\
 
     //Propiedades del header
     header.style.backgroundColor = '#fff';
-    header.style.position = 'fixed';
+    //header.style.position = 'fixed';
     header.style.top = '0';
-    header.style.width = '100%';
+    //header.style.width = '100%';
 
     
     // Propiedades del div "nuevoDiv"
@@ -35,15 +36,16 @@ document.addEventListener('DOMContentLoaded', function () {
     nuevoDiv.style.fontFamily = 'Arial, sans-serif';
     
     //Propiedades del div "nuevoDiv1"
-    nuevoDiv1.textContent = '*BUHO* duolingo';
+    nuevoDiv1.textContent = '*Insertar buho* duolingo';
     nuevoDiv1.style.backgroundColor = '#fff';
     nuevoDiv1.style.color = '#58cc02';
-    nuevoDiv1.style.position = 'fixed';
+    //nuevoDiv1.style.position = 'fixed';
     nuevoDiv1.style.display = 'inline-block';
     nuevoDiv1.style.fontSize = '35px';
-    nuevoDiv1.style.marginTop = '2%'
+    //nuevoDiv1.style.marginTop = '2%'
     nuevoDiv1.style.fontWeight = 'bold';
     nuevoDiv1.style.fontFamily = 'Arial, sans-serif';
+    nuevoDiv1.style.marginLeft = '12%'
 
     // Propiedades del menu "menuIdiomas"
     var menuIdiomas = document.createElement('div');
@@ -66,10 +68,12 @@ document.addEventListener('DOMContentLoaded', function () {
     divTextoInicio.style.fontWeight = 'bold';
 
     //Propiedades de la imagen
-    imgDuoInicio.src = 'C://Users//PRH//Documents//Nueva carpeta//imagenes//duo.PNG';
-    imgDuoInicio.style.scale = '10%';
-    imgDuoInicio.style.alignContent = 'left';
+    imgDuoInicio.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//duo.PNG';
+    imgDuoInicio.style.marginLeft = '12%'
+    imgDuoInicio.style.marginTop = '-18%';
     
+    //Propiedades de la barra de idiomas
+
 
     //-------------------------Opciones o funciones-------------------------\\
 
@@ -111,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if(window.pageYOffset > 0) {
             header.style.position = 'fixed';
         } else {
-            header.style.position = 'relative';
+            header.style.position = 'static';
         }
     });
 
