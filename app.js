@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     nuevoDiv.textContent = 'Aprende diferentes idiomas';
     nuevoDiv.style.cursor = 'pointer';
     nuevoDiv.style.padding = '10px';
-    //nuevoDiv.style.backgroundColor = '#fff';
+    nuevoDiv.style.backgroundColor = '#fff';
     nuevoDiv.style.color = '#9b9898';
     nuevoDiv.style.position = 'fixed';  
     nuevoDiv.style.top = '5%';          
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     divTextoInicio.style.fontWeight = 'bold';
 
     //Propiedades de la imagen
-    imgDuoInicio.src = 'C://Users//PRH//Documents//Nueva carpeta//imagenes//Duo.png';
+    imgDuoInicio.src = 'C://Users//PRH//Documents//Nueva carpeta//imagenes//duo.PNG';
     imgDuoInicio.style.scale = '10%';
     imgDuoInicio.style.alignContent = 'left';
     
@@ -106,14 +106,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    //Funcion para que eñ header siga el scroll
-    window.scroll = function() {
+    //Funcion para que el header siga el scroll
+    window.addEventListener('scroll', function() {
         if(window.pageYOffset > 0) {
             header.style.position = 'fixed';
         } else {
             header.style.position = 'relative';
         }
-    }
+    });
+
 
     //-------------------------Declaracion y anidacion de los diferentes elementos del DOM-------------------------\\
 
