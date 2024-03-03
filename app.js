@@ -5,10 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var nuevoDiv = document.createElement('div');
     var nuevoDiv1 = document.createElement('div');
     var divTextoInicio = document.createElement('div');
+    var botonEmpieza = document.createElement('buttom');
     var imgDuoInicio = document.createElement('img');
     var barraIdiomas = document.createElement('div');
+    var br = document.createElement('br');
     
-
     //-------------------------Propiedades de todo-------------------------\\
 
     //Propiedades del header
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     barraBlanca.style.top = '0';
 
     // Propiedades del div "nuevoDiv"
-    nuevoDiv.textContent = 'Aprende diferentes idiomas';
+    nuevoDiv.textContent = 'APRENDE DIFERENTES IDIOMAS ▽';
     nuevoDiv.style.cursor = 'pointer';
     nuevoDiv.style.padding = '10px';
     nuevoDiv.style.backgroundColor = '#fff';
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     nuevoDiv.style.display = 'inline-block';
     nuevoDiv.style.marginTop = '2%';
     nuevoDiv.style.marginRight = '11.5%';
-    nuevoDiv.style.fontSize = '25px';
+    nuevoDiv.style.fontSize = '1vw';
     nuevoDiv.style.fontWeight = 'bold';
     nuevoDiv.style.fontFamily = 'Arial, sans-serif';
     
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
     nuevoDiv1.style.fontWeight = 'bold';
     nuevoDiv1.style.fontFamily = 'Arial, sans-serif';
     nuevoDiv1.style.marginLeft = '12%'
+    nuevoDiv1.style.cursor = 'pointer';
 
     // Propiedades del menu "menuIdiomas"
     var menuIdiomas = document.createElement('div');
@@ -64,11 +66,12 @@ document.addEventListener('DOMContentLoaded', function () {
     menuIdiomas.style.fontFamily = 'Arial, sans-serif';
 
     //Propiedades del div "divTextoInicio"
-    divTextoInicio.textContent = '¡La forma divertida, efectiva y gratis de aprender un idioma!';
+    divTextoInicio.textContent = "¡La forma divertida, efectiva y gratis de aprender un idioma!";
     divTextoInicio.style.color = '#3f3e3e';
     divTextoInicio.style.fontSize = '35px';
     divTextoInicio.style.marginLeft = '50%';
     divTextoInicio.style.marginTop = '220px';
+    divTextoInicio.style.marginBottom = '2%'
     divTextoInicio.style.marginRight = "9%";
     divTextoInicio.style.textAlign = 'center';
     divTextoInicio.style.fontFamily = 'Arial, sans-serif';
@@ -82,14 +85,40 @@ document.addEventListener('DOMContentLoaded', function () {
     
     //Propiedades de la barra de idiomas
     barraIdiomas.textContent = 'Idiomas aca';
-    barraIdiomas.style.alignContent = 'center';
+    barraIdiomas.style.textAlign = 'center';
     barraIdiomas.style.borderBlock = "2px solid #000";
-    barraIdiomas.style.marginTop = "400px"
+    barraIdiomas.style.marginTop = "10%"
+    barraIdiomas.style.height = '100%';
+    barraIdiomas.style.fontSize = '3vw';
+    barraIdiomas.style.fontWeight = 'bold';
+    barraIdiomas.style.fontFamily = 'Arial, sans-serif';
+
+    botonEmpieza.textContent = 'EMPIEZA AHORA';
+    botonEmpieza.style.marginLeft = '8%';
+    botonEmpieza.style.cursor = 'pointer';
+    botonEmpieza.style.fontWeight = 'bold';
+    botonEmpieza.style.height = '100%';
+    botonEmpieza.style.scale = '80%';
+    botonEmpieza.style.borderRadius = '15px';
+    botonEmpieza.style.fontFamily = 'Arial, sans-serif';
+    botonEmpieza.style.fontSize = '1.5vw';
+    botonEmpieza.style.backgroundColor = '#58cc02';
+    botonEmpieza.style.color = '#fff';
+    botonEmpieza.style.display = 'block';
+    botonEmpieza.style.marginTop = '40px';
+    botonEmpieza.style.marginRight = '50px';
+    botonEmpieza.style.paddingTop = '20px';
+    botonEmpieza.style.paddingBottom = '20px';
+    botonEmpieza.style.paddingRight = '30px';
+    botonEmpieza.style.paddingLeft = '35px';
+    botonEmpieza.style.boxShadow = '0px 6px 4px rgba(63, 145, 0, 1)'
+    
 
     //-------------------------Opciones o funciones-------------------------\\
 
     //menuIdiomas
-    //Asignar opciones al menuIdiomas
+    //Asignar opciones al menuIdioma
+
     var opciones = ['Español', 'Ingles', 'Ruso'];
 
     opciones.forEach(function (opcionTexto) {
@@ -130,16 +159,22 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
+    //Funcion anuncio para que funcione el boton
+    botonEmpieza.addEventListener('click', function() {
+        alert('Empieza ahora ya');
+    })
+  
     //-------------------------Declaracion y anidacion de los diferentes elementos del DOM-------------------------\\
 
 
     //Añadir los div's necesarios al header
     body.appendChild(header);
+
     body.appendChild(divTextoInicio);
     body.appendChild(imgDuoInicio);
+    divTextoInicio.appendChild(botonEmpieza);
     body.appendChild(barraIdiomas);
-
+    
     //Añade el nuevoDiv al cuerpo del documento
     header.appendChild(nuevoDiv);
     header.appendChild(nuevoDiv1);
