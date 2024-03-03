@@ -243,33 +243,49 @@ document.addEventListener('DOMContentLoaded', function () {
     imgAprendizaje.style.marginTop = '-70%';
 
     //Propiedades divSuperDuo
-    divSuperDuo.style.backgroundColor = '#100f3e'; // Cambiar el color a azul oscuro
+    divSuperDuo.style.backgroundColor = '#100f3e';
     divSuperDuo.style.marginTop = '9%';
     divSuperDuo.style.marginLeft = '-1%';
     divSuperDuo.style.width = '101.6%';
     divSuperDuo.style.paddingTop = '20%';
     divSuperDuo.style.paddingBottom = '20%';
-    divSuperDuo.style.display = 'flex'; // Utilizar display flex
-    divSuperDuo.style.alignItems = 'center'; // Alinear los elementos en el centro verticalmente
-
+    divSuperDuo.style.display = 'flex';
+    divSuperDuo.style.alignItems = 'center';
 
     //Propiedades de la imgSuperDuo
     imgSuperDuo.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//superDuo.PNG';
     imgSuperDuo.style.marginLeft = '8%';
-    imgSuperDuo.style.marginTop = '-10%';
+    imgSuperDuo.style.marginTop = '-8%';
 
     //Propiedades del titulo imagen
     infoSuperDuo.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//superDuoTexto.PNG';
     infoSuperDuo.style.position = 'static';
-    infoSuperDuo.marginTop = '10%';
-    infoSuperDuo.style.marginLeft = '60%';
-    infoSuperDuo.style.display = 'flex'; // Añadir propiedad display flex
+    infoSuperDuo.marginTop = '20%';
+    infoSuperDuo.style.marginLeft = '-1%';
+    infoSuperDuo.style.display = 'flex';
     infoSuperDuo.style.alignItems = 'center';
-    infoSuperDuo.style.justifyContent = 'center'; // Alinear en el eje y al centro
+    infoSuperDuo.style.justifyContent = 'center';
 
+    //Propiedades del boton superDuo
+    botonSuperDuo.textContent = 'PRUEBA 2 SEMANAS GRATIS';
+    botonSuperDuo.style.position = 'block';
+    botonSuperDuo.style.marginTop = '10%';
+    botonSuperDuo.style.marginLeft = '-26%';
+    botonSuperDuo.style.cursor = 'pointer';
+    botonSuperDuo.style.fontWeight = 'bold';
+    botonSuperDuo.style.borderRadius = '12px';
+    botonSuperDuo.style.border = '3px solid #e2e2e2'
+    botonSuperDuo.style.fontFamily = 'Arial, sans-serif';
+    botonSuperDuo.style.fontSize = '1.2vw';
+    botonSuperDuo.style.backgroundColor = '#fff';
+    botonSuperDuo.style.color = '#0077ff';
+    botonSuperDuo.style.display = 'sticky';
     
-    //Propiedades boton super duo
-    var botonSuperDuo = document.createElement('button');
+    botonSuperDuo.style.paddingTop = '10px';
+    botonSuperDuo.style.paddingBottom = '10px';
+    botonSuperDuo.style.paddingRight = '7px';
+    botonSuperDuo.style.paddingLeft = '7px';
+    botonSuperDuo.style.boxShadow = '0px 4px 0px rgba(226, 226, 226, 1)'
 
     //-------------------------Opciones o funciones-------------------------\\
 
@@ -372,5 +388,5 @@ document.addEventListener('DOMContentLoaded', function () {
     body.appendChild(divSuperDuo);
     divSuperDuo.appendChild(imgSuperDuo);
     divSuperDuo.appendChild(infoSuperDuo);
-    //divSuperDuo.appendChild(botonSuperDuo);
+    divSuperDuo.appendChild(botonSuperDuo);
 });
