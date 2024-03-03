@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var body = document.body;
     var header = document.createElement('header');
     var nuevoDiv = document.createElement('div');
+    var divIcono = document.createElement('div');
     var nuevoDiv1 = document.createElement('div');
+    var imgDuoIcono = document.createElement('img');
     var divTextoInicio = document.createElement('div');
     var botonEmpieza = document.createElement('button');
     var imgDuoInicio = document.createElement('img');
@@ -21,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var textoAprendizaje = document.createElement('div');
     var infoAprendizaje = document.createElement('div');
     var imgAprendizaje = document.createElement('img');
-    
+    var divSuperDuo = document.createElement('div');
+    var imgSuperDuo = document.createElement('img');
+    var infoSuperDuo = document.createElement('div');    
     //-------------------------Propiedades de todo-------------------------\\
 
     var barraBlanca = document.createElement('div');
@@ -49,13 +53,19 @@ document.addEventListener('DOMContentLoaded', function () {
     nuevoDiv.style.fontWeight = 'bold';
     nuevoDiv.style.fontFamily = 'Arial, sans-serif';
     
+
+    //Propiedades imgDuoIcono
+    //imgDuoIcono.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//DuoIcono.PNG';
+    //imgDuoIcono.style.marginLeft = '-4vw';
+    //imgDuoIcono.style.marginTop = '-10vw';
+
     //Propiedades del div "nuevoDiv1"
-    nuevoDiv1.textContent = '*Insertar buho* duolingo';
+    nuevoDiv1.textContent = 'duolingo';
     nuevoDiv1.style.backgroundColor = '#fff';
     nuevoDiv1.style.color = '#58cc02';
     nuevoDiv1.style.position = 'fixed';
     nuevoDiv1.style.top = '0';
-    nuevoDiv1.style.fontSize = '3vw';
+    nuevoDiv1.style.fontSize = '2.9vw';
     nuevoDiv1.style.display = 'inline-block'
     nuevoDiv1.style.marginTop = '2%'
     nuevoDiv1.style.fontWeight = 'bold';
@@ -305,6 +315,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //-------------------------Declaracion y anidacion de los diferentes elementos del DOM-------------------------\\
 
     header.appendChild(nuevoDiv);
+    nuevoDiv1.appendChild(imgDuoIcono);
     header.appendChild(nuevoDiv1);
     header.insertBefore(barraBlanca, header.firstChild);
     body.appendChild(header);
