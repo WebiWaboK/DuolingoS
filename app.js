@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var barraIdiomas = document.createElement('div');
     var botonCuenta = document.createElement('button');
     var textoDivertido = document.createElement('div');
+    var infoDivertido = document.createElement('div');
     
     //-------------------------Propiedades de todo-------------------------\\
 
@@ -136,7 +137,17 @@ document.addEventListener('DOMContentLoaded', function () {
     //Propiedades de el div textoDivertido
     textoDivertido.textContent = 'divertido, efectivo y gratis';
     textoDivertido.style.marginTop = '20%';
-    
+    textoDivertido.style.marginLeft = '12%';
+    textoDivertido.style.marginRight = '50%';
+    textoDivertido.style.fontSize = '3.8vw';
+    textoDivertido.style.fontWeight = 'bold';
+    textoDivertido.style.color = '#58cc02'
+
+    //Propiedades infoDivertido
+    infoDivertido.textContent = 'Aprender con Duolingo es divertido y los estudios demuestran que funciona. ¡En nuestras lecciones cortas ganarás puntos y habilitarás nuevas unidades al mismo tiempo que desarrollas tus habilidades de comunicación en la vida real!';
+    infoDivertido.style.fontSize = '1.2vw';
+    infoDivertido.style.marginTop = '7%';
+    infoDivertido.style.color = '#9b9898';
 
     //-------------------------Opciones o funciones-------------------------\\
 
@@ -224,5 +235,6 @@ document.addEventListener('DOMContentLoaded', function () {
     body.appendChild(barraIdiomas);
     body.appendChild(textoDivertido);
     nuevoDiv.appendChild(menuIdiomas);
+    textoDivertido.appendChild(infoDivertido);
 
 });
