@@ -12,12 +12,18 @@ document.addEventListener('DOMContentLoaded', function () {
     //-------------------------Propiedades de todo-------------------------\\
 
     //Propiedades del header
-    header.style.backgroundColor = '#fff';
-    //header.style.position = 'fixed';
-    header.style.top = '0';
-    //header.style.width = '100%';
+    //header.style.backgroundColor = '#fff';
+    //header.style.top = '0';
+    //header.style.marginTop = '1%';
+ 
+    var barraBlanca = document.createElement('div');
+    barraBlanca.style.width = '100%';
+    barraBlanca.style.height = '100px';
+    barraBlanca.style.marginLeft = '-8px';
+    barraBlanca.style.backgroundColor = '#fff';
+    barraBlanca.style.position = 'fixed';  
+    barraBlanca.style.top = '0';
 
-    
     // Propiedades del div "nuevoDiv"
     nuevoDiv.textContent = 'Aprende diferentes idiomas';
     nuevoDiv.style.cursor = 'pointer';
@@ -25,11 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
     nuevoDiv.style.backgroundColor = '#fff';
     nuevoDiv.style.color = '#9b9898';
     nuevoDiv.style.position = 'fixed';  
-    nuevoDiv.style.top = '5%';          
+    nuevoDiv.style.top = '0';          
     nuevoDiv.style.right = '0';          
-    nuevoDiv.style.transform = 'translateY(-50%)';
+    //nuevoDiv.style.transform = 'translateY(-50%)';
     nuevoDiv.style.display = 'inline-block';
-    nuevoDiv.style.marginTop = '1%';
+    nuevoDiv.style.marginTop = '2%';
     nuevoDiv.style.marginRight = '11.5%';
     nuevoDiv.style.fontSize = '25px';
     nuevoDiv.style.fontWeight = 'bold';
@@ -39,10 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
     nuevoDiv1.textContent = '*Insertar buho* duolingo';
     nuevoDiv1.style.backgroundColor = '#fff';
     nuevoDiv1.style.color = '#58cc02';
-    //nuevoDiv1.style.position = 'fixed';
-    nuevoDiv1.style.display = 'inline-block';
-    nuevoDiv1.style.fontSize = '35px';
-    //nuevoDiv1.style.marginTop = '2%'
+    nuevoDiv1.style.position = 'fixed';
+    nuevoDiv1.style.top = '0';
+    nuevoDiv1.style.fontSize = '3vw';
+    nuevoDiv1.style.display = 'inline-block'
+    nuevoDiv1.style.marginTop = '2%'
     nuevoDiv1.style.fontWeight = 'bold';
     nuevoDiv1.style.fontFamily = 'Arial, sans-serif';
     nuevoDiv1.style.marginLeft = '12%'
@@ -71,9 +78,13 @@ document.addEventListener('DOMContentLoaded', function () {
     imgDuoInicio.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//duo.PNG';
     imgDuoInicio.style.marginLeft = '12%'
     imgDuoInicio.style.marginTop = '-18%';
+    imgDuoInicio.style.position = 'static';
     
     //Propiedades de la barra de idiomas
-
+    barraIdiomas.textContent = 'Idiomas aca';
+    barraIdiomas.style.alignContent = 'center';
+    barraIdiomas.style.borderBlock = "2px solid #000";
+    barraIdiomas.style.marginTop = "400px"
 
     //-------------------------Opciones o funciones-------------------------\\
 
@@ -115,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if(window.pageYOffset > 0) {
             header.style.position = 'fixed';
         } else {
-            header.style.position = 'static';
+            header.style.position = 'fixed';
         }
     });
 
@@ -127,13 +138,14 @@ document.addEventListener('DOMContentLoaded', function () {
     body.appendChild(header);
     body.appendChild(divTextoInicio);
     body.appendChild(imgDuoInicio);
+    body.appendChild(barraIdiomas);
 
     //Añade el nuevoDiv al cuerpo del documento
     header.appendChild(nuevoDiv);
     header.appendChild(nuevoDiv1);
+    header.insertBefore(barraBlanca, header.firstChild);
 
     // Agregar el mini menú dentro del nuevoDiv
     nuevoDiv.appendChild(menuIdiomas);
 
 });
-
