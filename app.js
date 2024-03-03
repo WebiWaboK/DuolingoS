@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var textoDivertido = document.createElement('div');
     var infoDivertido = document.createElement('div');
     var imgSrTelefono = document.createElement('img');
+    var textoRespaldo = document.createElement('div');
+    var infoRespaldo = document.createElement('div');
     
     //-------------------------Propiedades de todo-------------------------\\
 
@@ -156,6 +158,22 @@ document.addEventListener('DOMContentLoaded', function () {
     imgSrTelefono.style.marginLeft = '135%';
     imgSrTelefono.style.marginTop = '-70%';
 
+    //Propiedades de textoRespaldo
+    textoRespaldo.textContent = 'respaldado por la ciencia'
+    textoRespaldo.style.fontSize = '3.8vw';
+    textoRespaldo.style.fontWeight = 'bold';
+    textoRespaldo.style.color = '#58cc02';
+    textoRespaldo.style.marginTop = '15%';
+    textoRespaldo.style.marginLeft = '50%';
+    textoRespaldo.style.marginRight = '12%';
+
+    //Propiedades infoRespaldo
+    infoRespaldo.textContent = 'Gracias a la combinación de métodos de enseñanza respaldados por la ciencia y un contenido entretenido, creamos cursos que enseñan de forma eficiente a leer, escribir, entender y hablar en otros idiomas.';
+    infoRespaldo.style.fontSize = '1.2vw';
+    infoRespaldo.style.marginTop = '7%';
+    infoRespaldo.style.color = '#9b9898';
+    infoRespaldo.style.lineHeight = '2vw';
+
     //-------------------------Opciones o funciones-------------------------\\
 
     //menuIdiomas
@@ -244,5 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
     nuevoDiv.appendChild(menuIdiomas);
     textoDivertido.appendChild(infoDivertido);
     textoDivertido.appendChild(imgSrTelefono);
+    body.appendChild(textoRespaldo);
+    textoRespaldo.appendChild(infoRespaldo);
 
 });
