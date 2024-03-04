@@ -39,7 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var textoMath = document.createElement('div');
     var infoMath = document.createElement('div');
     var imgMath = document.createElement('img');
-    
+    var AprendeIdiomas = document.createElement('div');
+    var imgFinal = document.createElement('img');
+    //var divFinal = document.createElement('div');
+    var footer = document.createElement('footer');
     
     //-------------------------Propiedades de todo-------------------------\\
 
@@ -382,6 +385,39 @@ document.addEventListener('DOMContentLoaded', function () {
     imgMath.style.marginLeft = '-115%';
     imgMath.style.marginTop = '-70%'; 
 
+    //Propiedades de AprendeIdiomas
+    AprendeIdiomas.textContent = 'aprende idiomas con duolingo';
+    AprendeIdiomas.style.fontSize = '5vw';
+    AprendeIdiomas.style.marginTop = '20%';
+    AprendeIdiomas.style.marginLeft = '25%';
+    AprendeIdiomas.style.marginRight = '25%';
+    AprendeIdiomas.style.fontWeight = 'bold';
+    AprendeIdiomas.style.color = '#58cc02';
+    AprendeIdiomas.style.textAlign = 'center';
+
+    //Propiedades imgFinal
+    imgFinal.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//final.PNG';
+    //imgFinal.style.height = '1%';
+
+    //Propiedades de divFinal
+    //divFinal.textContent = '‎ '
+    //divFinal.style.backgroundColor = '#58cc02';
+    //divFinal.style.marginTop = "-20.69%";
+    //divFinal.style.padding = '40%'
+    
+    //Propiedades del footer
+    footer.style.backgroundColor = '#58cc02';
+    footer.style.color = '#b0e488';
+    footer.style.paddingTop = '150px';
+    footer.style.display = 'grid';
+    footer.style.marginTop = '-2%';
+    //footer.style.position = 'fixed';
+    footer.style.fontWeight = 'bold';
+    footer.style.gridTemplateColumns = 'repeat(5, 1fr)';
+    footer.style.gridGap = '20px';
+
+    
+
     //-------------------------Opciones o funciones-------------------------\\
 
     //menuIdiomas
@@ -455,6 +491,78 @@ document.addEventListener('DOMContentLoaded', function () {
     // Agregar la barra de idiomas al cuerpo del documento
     document.body.appendChild(barraIdiomas);
 
+    //Agregar cosas al footer
+    var column1 = createColumn([
+        'Sobre nosotros',
+        'Cursos',
+        'Misión',
+        'Método de enseñanza',
+        'Eficacia',
+        'Equipo',
+        'Investigación',
+        'Empleo',
+        'Guía para uso de marca',
+        'Tienda',
+        'Prensa',
+        'Inversionistas',
+        'Contáctanos'
+    ]);
+
+    var column2 = createColumn([
+        'Productos',
+        'Duolingo',
+        'Duolingo for Schools',
+        'Duolingo English Test',
+        'Podcast',
+        'Duolingo for Business',
+        'Súper Duolingo',
+        'Regala Súper Duolingo'
+    ]);
+
+    var column3 = createColumn([
+        'Aplicaciones',
+        'Duolingo para Android',
+        'Duolingo para iOS'
+    ]);
+
+    var column4 = createColumn([
+        'Ayuda y soporte',
+        'App de Duolingo',
+        'Schools',
+        'Duolingo English Test',
+        'Estado',
+        'Términos y privacidad',
+        'Normas de la comunidad'
+    ]);
+
+    var column5 = createColumn([
+        'Términos Privacidad',
+        'Social',
+        'Blog',
+        'Instagram',
+        'Facebook',
+        'Twitter',
+        'YouTube'
+    ]);
+
+    function createColumn(items) {
+        var column = document.createElement('div');
+        column.style.paddingRight = '20px';
+    
+        var list = document.createElement('ul');
+        list.style.listStyle = 'none';
+        list.style.padding = '0';
+    
+        items.forEach(function (itemText) {
+            var listItem = document.createElement('li');
+            listItem.textContent = itemText;
+            list.appendChild(listItem);
+        });
+    
+        column.appendChild(list);
+        return column;
+    }
+
     //-------------------------Declaracion y anidacion de los diferentes elementos del DOM-------------------------\\
 
     header.appendChild(nuevoDiv);
@@ -496,5 +604,13 @@ document.addEventListener('DOMContentLoaded', function () {
     body.appendChild(textoMath);
     textoMath.appendChild(infoMath);
     textoMath.appendChild(imgMath);
-
+    body.appendChild(AprendeIdiomas);
+    body.appendChild(imgFinal);
+    //body.appendChild(divFinal);
+    footer.appendChild(column1);
+    footer.appendChild(column2);
+    footer.appendChild(column3);
+    footer.appendChild(column4);
+    footer.appendChild(column5);
+    body.appendChild(footer);
 });
