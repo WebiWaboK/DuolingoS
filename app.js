@@ -33,6 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var textoEscuela = document.createElement('div');
     var infoEscuela = document.createElement('div');
     var imgEscuela = document.createElement('img');
+    var textoAbc = document.createElement('div');
+    var infoAbc = document.createElement('div');
+    var imgAbc = document.createElement('img');
+    var textoMath = document.createElement('div');
+    var infoMath = document.createElement('div');
+    var imgMath = document.createElement('img');
     
     
     //-------------------------Propiedades de todo-------------------------\\
@@ -302,7 +308,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Propiedades de info testIngles
     infoTestIngles.textContent = 'Nuestro examen de inglés es conveniente, rápido y económico. El Duolingo English Test integra los últimos avances en la ciencia e inteligencia artificial para dar a todas las personas la posibilidad de elegir dónde y cuándo hacer el examen y que puedan dar lo mejor de sí.';
-    infoTestIngles.textContent = 'Nuestras funcionalidades y desafíos son divertidos y hacen que aprender se sienta como un juego. ¡Vas a poder formar un hábito de aprendizaje sin esfuerzo! Y, por supuesto, recibirás recordatorios de nuestra adorable mascota, Duo, el búho.';
     infoTestIngles.style.fontSize = '1.2vw';
     infoTestIngles.style.marginTop = '7%';
     infoTestIngles.style.color = '#9b9898';
@@ -333,6 +338,49 @@ document.addEventListener('DOMContentLoaded', function () {
     imgEscuela.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//imgEscuela.PNG'
     imgEscuela.style.marginLeft = '-115%';
     imgEscuela.style.marginTop = '-70%';
+
+    //Propiedades de textoAbc
+    textoAbc.textContent = 'duolingo abc';
+    textoAbc.style.marginTop = '20%';
+    textoAbc.style.marginLeft = '12%';
+    textoAbc.style.marginRight = '50%';
+    textoAbc.style.fontSize = '3.8vw';
+    textoAbc.style.fontWeight = 'bold';
+    textoAbc.style.color = '#58cc02';
+
+    //Propiedades de infoAbc
+    infoAbc.textContent = '¡Desde aprender idiomas hasta alfabetismo! Con lecciones de fonética y cuentos divertidos, Duolingo ABC enseña a niños y niñas de entre 3 y 8 años a leer y escribir… ¡y es totalmente gratis!';
+    infoAbc.style.fontSize = '1.2vw';
+    infoAbc.style.marginTop = '7%';
+    infoAbc.style.color = '#9b9898';
+    infoAbc.style.lineHeight = '2vw';
+
+    //Propiedades de imgAbc
+    imgAbc.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//abc.PNG'
+    imgAbc.style.marginLeft = '135%';
+    imgAbc.style.marginTop = '-90%';
+
+    //Propiedades
+    //Propiedades de math
+    textoMath.textContent = 'duolingo math';
+    textoMath.style.fontSize = '3.8vw';
+    textoMath.style.fontWeight = 'bold';
+    textoMath.style.color = '#58cc02';
+    textoMath.style.marginTop = '15%';
+    textoMath.style.marginLeft = '50%';
+    textoMath.style.marginRight = '10%';
+
+    //Propiedades de infoEscuela
+    infoMath.textContent = '¡Prueba nuestras lecciones cortas y gratis para matemáticas! Con Duolingo Math, los estudiantes podrán adelantarse en sus clases de matemáticas y los adultos podrán practicar para mejorar su destreza matemática.';
+    infoMath.style.fontSize = '1.2vw';
+    infoMath.style.marginTop = '7%';
+    infoMath.style.color = '#9b9898';
+    infoMath.style.lineHeight = '2vw';
+
+    //Propiedades imgEscuela
+    imgMath.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//math.PNG';
+    imgMath.style.marginLeft = '-115%';
+    imgMath.style.marginTop = '-70%'; 
 
     //-------------------------Opciones o funciones-------------------------\\
 
@@ -442,4 +490,11 @@ document.addEventListener('DOMContentLoaded', function () {
     body.appendChild(textoEscuela);
     textoEscuela.appendChild(infoEscuela);
     textoEscuela.appendChild(imgEscuela);
+    body.appendChild(textoAbc);
+    textoAbc.appendChild(infoAbc);
+    textoAbc.appendChild(imgAbc);
+    body.appendChild(textoMath);
+    textoMath.appendChild(infoMath);
+    textoMath.appendChild(imgMath);
+
 });
