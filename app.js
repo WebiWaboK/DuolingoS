@@ -27,6 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var imgSuperDuo = document.createElement('img');
     var infoSuperDuo = document.createElement('img');   
     var botonSuperDuo = document.createElement('button');
+    var textoTestIngles = document.createElement('div');
+    var infoTestIngles = document.createElement('div');
+    var imgTestIngles = document.createElement('img');
+    var textoEscuela = document.createElement('div');
+    var infoEscuela = document.createElement('div');
+    var imgEscuela = document.createElement('img');
     
     
     //-------------------------Propiedades de todo-------------------------\\
@@ -221,7 +227,6 @@ document.addEventListener('DOMContentLoaded', function () {
     imgMotivacion.style.marginTop = '-70%';
 
     //Propiedades de textoAprendizaje
-
     textoAprendizaje.textContent = 'aprendizaje personalizado';
     textoAprendizaje.style.fontSize = '3.8vw';
     textoAprendizaje.style.fontWeight = 'bold';
@@ -280,12 +285,54 @@ document.addEventListener('DOMContentLoaded', function () {
     botonSuperDuo.style.backgroundColor = '#fff';
     botonSuperDuo.style.color = '#0077ff';
     botonSuperDuo.style.display = 'sticky';
-    
     botonSuperDuo.style.paddingTop = '10px';
     botonSuperDuo.style.paddingBottom = '10px';
     botonSuperDuo.style.paddingRight = '7px';
     botonSuperDuo.style.paddingLeft = '7px';
-    botonSuperDuo.style.boxShadow = '0px 4px 0px rgba(226, 226, 226, 1)'
+    botonSuperDuo.style.boxShadow = '0px 4px 0px rgba(226, 226, 226, 1)';
+
+    //Propiedades para titulo de test ingles
+    textoTestIngles.textContent = 'duolingo english test';
+    textoTestIngles.style.marginTop = '20%';
+    textoTestIngles.style.marginLeft = '12%';
+    textoTestIngles.style.marginRight = '50%';
+    textoTestIngles.style.fontSize = '3.8vw';
+    textoTestIngles.style.fontWeight = 'bold';
+    textoTestIngles.style.color = '#58cc02';
+
+    //Propiedades de info testIngles
+    infoTestIngles.textContent = 'Nuestro examen de inglés es conveniente, rápido y económico. El Duolingo English Test integra los últimos avances en la ciencia e inteligencia artificial para dar a todas las personas la posibilidad de elegir dónde y cuándo hacer el examen y que puedan dar lo mejor de sí.';
+    infoTestIngles.textContent = 'Nuestras funcionalidades y desafíos son divertidos y hacen que aprender se sienta como un juego. ¡Vas a poder formar un hábito de aprendizaje sin esfuerzo! Y, por supuesto, recibirás recordatorios de nuestra adorable mascota, Duo, el búho.';
+    infoTestIngles.style.fontSize = '1.2vw';
+    infoTestIngles.style.marginTop = '7%';
+    infoTestIngles.style.color = '#9b9898';
+    infoTestIngles.style.lineHeight = '2vw';
+
+    //Propiedades de imgTestIngles
+    imgTestIngles.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//textIngles.PNG';
+    imgTestIngles.style.marginLeft = '135%';
+    imgTestIngles.style.marginTop = '-90%';
+
+    //Propiedades de textEscuela
+    textoEscuela.textContent = 'duolingo for schools';
+    textoEscuela.style.fontSize = '3.8vw';
+    textoEscuela.style.fontWeight = 'bold';
+    textoEscuela.style.color = '#58cc02';
+    textoEscuela.style.marginTop = '15%';
+    textoEscuela.style.marginLeft = '50%';
+    textoEscuela.style.marginRight = '10%';
+
+    //Propiedades de infoEscuela
+    infoEscuela.textContent = 'Maestras y maestros: ¡estamos para ayudarlos! Nuestra herramienta gratuita ayuda a tus estudiantes a aprender idiomas a través de la app de Duolingo, tanto dentro como fuera del salón de clases.';
+    infoEscuela.style.fontSize = '1.2vw';
+    infoEscuela.style.marginTop = '7%';
+    infoEscuela.style.color = '#9b9898';
+    infoEscuela.style.lineHeight = '2vw';
+
+    //Propiedades imgEscuela
+    imgEscuela.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//imgEscuela.PNG'
+    imgEscuela.style.marginLeft = '-115%';
+    imgEscuela.style.marginTop = '-70%';
 
     //-------------------------Opciones o funciones-------------------------\\
 
@@ -389,4 +436,10 @@ document.addEventListener('DOMContentLoaded', function () {
     divSuperDuo.appendChild(imgSuperDuo);
     divSuperDuo.appendChild(infoSuperDuo);
     divSuperDuo.appendChild(botonSuperDuo);
+    body.appendChild(textoTestIngles);
+    textoTestIngles.appendChild(infoTestIngles);
+    textoTestIngles.appendChild(imgTestIngles);
+    body.appendChild(textoEscuela);
+    textoEscuela.appendChild(infoEscuela);
+    textoEscuela.appendChild(imgEscuela);
 });
