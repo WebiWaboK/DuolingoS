@@ -73,9 +73,10 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
     //Propiedades imgDuoIcono
-    //imgDuoIcono.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//DuoIcono.PNG';
-    //imgDuoIcono.style.marginLeft = '-4vw';
-    //imgDuoIcono.style.marginTop = '-10vw';
+    imgDuoIcono.src = 'C://Users//Coco//Desktop//Duolingo//imagenes//DuoIcono.PNG';
+    imgDuoIcono.style.marginLeft = '8vw';
+    imgDuoIcono.style.marginTop = '-14.9vw';
+    imgDuoIcono.style.position = 'fixed';
 
     //Propiedades del div "nuevoDiv1"
     nuevoDiv1.textContent = 'duolingo';
@@ -98,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
     menuIdiomas.style.backgroundColor = '#fff';
     menuIdiomas.style.border = '2px solid #000';
     menuIdiomas.style.color = '#000';
+    menuIdiomas.style.borderRadius = '10px';
     menuIdiomas.style.fontFamily = 'Arial, sans-serif';
 
     //Propiedades del div "divTextoInicio"
@@ -430,6 +432,8 @@ document.addEventListener('DOMContentLoaded', function () {
         opcion.textContent = opcionTexto;
         opcion.style.padding = '10px';
         opcion.style.cursor = 'pointer';
+        menuIdiomas.style.color = '#c2c2c2';
+
 
         opcion.addEventListener('click', function () {
             alert('Hiciste click en: ' + opcionTexto);  //Esta funcion hace que salga un menu donde se te diga a que opcion de diste click
@@ -439,7 +443,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //Funcion para ocultar el menu
-    nuevoDiv.addEventListener('click', function () {
+    nuevoDiv.addEventListener('mouseover', function () {
         if (menuIdiomas.style.display === 'block') {
             menuIdiomas.style.display = 'none';
         } else {
@@ -566,7 +570,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //-------------------------Declaracion y anidacion de los diferentes elementos del DOM-------------------------\\
 
     header.appendChild(nuevoDiv);
-    nuevoDiv1.appendChild(imgDuoIcono);
+    header.appendChild(imgDuoIcono);
     header.appendChild(nuevoDiv1);
     header.insertBefore(barraBlanca, header.firstChild);
     body.appendChild(header);
